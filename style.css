@@ -1,0 +1,63 @@
+.search{
+    height: 40px;
+    margin-top: 20px;
+}
+.input-search{
+    width: 50%;
+}
+.btn-create{
+    width: 15%;
+    font-size:15px;
+    margin-right: 20px;
+    margin-left: 646px;
+}
+.btn-save{
+    width: 15%;
+    font-size:15px;
+}
+.nav-item{
+    background-color: gray;
+    border-bottom: 3.5px solid black;
+}
+.tab-info{
+    display: none;
+}
+.tab-info.active{
+    display: block;
+}
+.tableNew,.tableAdmin{
+    margin-top: 20px;
+}
+.icon-edit{
+    margin-left: 30px;
+}
+.icon-delete{
+    margin-left: 20px;
+}
+/* .btnDelete{
+    width: 80px;
+    margin-left: 35px;
+    border-radius: 5px;
+    border: 1px solid;
+    background-color:#0d6efd;
+    color: white;
+}
+.btnUpdate{
+    width: 80px;
+    margin-left: 20px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    background-color:#0d6efd;
+    color: white;
+} */
+.table-fix{
+    text-align: center;
+}
+.logoHome{
+    width: 270px;
+    height: 40px;
+    margin-left: -150px;
+}
+.tabActive{
+    margin-left: 30px;
+}
