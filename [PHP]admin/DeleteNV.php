@@ -23,7 +23,7 @@
 
     $conn->close();
     }
-    header("Location: /CNWeb");
+    header("Location: /CNWeb/[PHP]admin/index.php");
     ?>
 </body>
 </html>

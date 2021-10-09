@@ -6,14 +6,9 @@
     width: 50%;
 }
 .btn-create{
-    width: 15%;
+    width: 125%;
     font-size:15px;
-    margin-right: 20px;
-    margin-left: 646px;
-}
-.btn-save{
-    width: 15%;
-    font-size:15px;
+    margin-bottom: 25px;
 }
 .nav-item{
     background-color: gray;
@@ -29,7 +24,7 @@
     margin-top: 20px;
 }
 .icon-edit{
-    margin-left: 30px;
+    margin-left: 20px;
 }
 .icon-delete{
     margin-left: 20px;
@@ -54,10 +49,20 @@
     text-align: center;
 }
 .logoHome{
-    width: 270px;
+    width: 260px;
     height: 40px;
     margin-left: -150px;
 }
 .tabActive{
     margin-left: 30px;
+}
+.list-child{
+    margin-left: 65px;
+    margin-bottom: 10px;
+}
+.active-list{
+    display: none;
+}
+.tab-child{
+    cursor: pointer;
 }

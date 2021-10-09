@@ -1,45 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danh bạ điện tử - Trường Đại học Thủy lợi</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-    <header class="p-3 bg-success text-white">
-    <div class="container">
-      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
-        </a>
-        <img src="./logo.png" alt="" class="logoHome">
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 tabActive">
-          <li><a href="#" class="nav-link px-2 text-white"><i class="fas fa-home"></i>Trang chủ</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Tính năng</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Giới thiệu</a></li>
-        </ul>
-
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-          <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-        </form>
-
+<?php
+    include("../header.php");
+?>
         <div class="text-end">
             <div class="dropdown">
                 <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                    <img src="./Logo-Thuy_Loi.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                    <img src="../img/Logo-Thuy_Loi.png" alt="" width="32" height="32" class="rounded-circle me-2">
                     <strong>TLU</strong>
                 </a>
                 <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                     <li><a class="dropdown-item" href="#">Settings</a></li>
-                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <?php
+                        $email = $_GET['user'];
+                    ?>
+                    <li><a class="dropdown-item" href="http://localhost/CNWeb/[PHP]profiles/profile.php?user=<?php echo $email; ?>">Profile</a></li>
                     <li><hr class="dropdown-divider"></li>
-                    <li><a class="dropdown-item" href="./home.php">Sign out</a></li>
+                    <li><a class="dropdown-item" href="../[PHP]home/home.php">Sign out</a></li>
                 </ul>
             </div>
         </div>
@@ -63,6 +38,22 @@
                                 <i class="fas fa-list-alt"></i>
                                 Danh sách
                             </a>
+                            <div class="home-child callapse list-child active-list">
+                                <ul class="list-unstyled">
+                                    <li class="tab-child">
+                                        <i class="fas fa-greater-than fa-xs"></i>
+                                         Khoa CNTT
+                                    </li>
+                                    <li class="tab-child">
+                                        <i class="fas fa-greater-than fa-xs"></i>
+                                        Khoa KT
+                                    </li>
+                                    <li class="tab-child">
+                                        <i class="fas fa-greater-than fa-xs"></i>
+                                        Khoa KTO
+                                    </li>
+                                </ul>
+                            </div>
                         </li >
                         <li class="tab-item nav-item">
                             <a href="#" class="nav-link link-dark">
@@ -96,14 +87,17 @@
                     <hr>
                     <div class="dropdown">
                         <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
-                            <img src="./Logo-Thuy_Loi.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                            <img src="../img/Logo-Thuy_Loi.png" alt="" width="32" height="32" class="rounded-circle me-2">
                             <strong>TLU</strong>
                         </a>
                         <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                             <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <?php
+                                $email = $_GET['user'];
+                            ?>
+                            <li><a class="dropdown-item" href="http://localhost/CNWeb/[PHP]profiles/profile.php?user=<?php echo $email; ?>">Profile</a></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="./home.php">Sign out</a></li>
+                            <li><a class="dropdown-item" href="../[PHP]home/home.php">Sign out</a></li>
                         </ul>
                     </div>
                 </div>
@@ -115,7 +109,7 @@
                         <div class="input-group rounded input-search">
                             <input type="search" class="form-control rounded" placeholder="Eg: Nguyễn Văn A" aria-label="Search"
                                 aria-describedby="search-addon" />
-                            <span class="input-group-text border-0" id="search-addon">
+                            <span type="submit" class="input-group-text border-0" id="search-addon">
                                 <i class="fas fa-search"></i>
                             </span>
                         </div>
@@ -145,15 +139,19 @@
                                 
                                 //b3  kiem tra va xu li tap ket qua  - ung voi cau lenh select  
                                 if(mysqli_num_rows($result)>0){
+                                    $i=1;
                                     while($row = mysqli_fetch_assoc($result)){
-                                        echo "<tr>";
-                                            echo '<th scope="row">',$row['manv'],'</th>';
-                                            echo "<td>",$row['tennv'],"</td>";
-                                            echo "<td>",$row['chucvu'],"</td>";
-                                            echo "<td>",$row['email'],"</td>";
-                                            echo "<td>",$row['sodidong'],"</td>";
-                                            echo "<td>",$row['tendv'],"</td>";
-                                        echo "</tr>";
+                            ?>
+                                        <tr>
+                                            <th scope="row"><?php echo $i; ?> </th>
+                                            <td><?php echo $row['tennv']; ?> </td>
+                                            <td><?php echo $row['chucvu']; ?> </td>
+                                            <td><?php echo $row['email']; ?> </td>
+                                            <td><?php echo $row['sodidong']; ?> </td>
+                                            <td><?php echo $row['tendv']; ?> </td>
+                                        </tr>
+                            <?php
+                                        $i++;
                                     }
                                 }
                             ?>
@@ -171,9 +169,11 @@
                             </span>
                         </div>
                     </div>
-                    <div class="btn-admin d-flex">
-                        <button type="button" class="btn btn-primary btn-lg btn-create">+ Tạo mới</button>
-                        <button type="button" class="btn btn-primary btn-lg btn-save">Lưu thay đổi</button>
+                    <div class="btn-admin d-flex float-end">
+                        <a href="./CreateNV.php">
+                            <button type="button" class="btn btn-primary btn-lg btn-create float-end">+ Tạo mới</button>
+                        </a>
+                        <!-- <button type="button" class="btn btn-primary btn-lg btn-save">Lưu thay đổi</button> -->
                     </div>
                     <table class="table table-bordered tableAdmin">
                         <thead class="table-fix">
@@ -183,6 +183,7 @@
                             <th scope="col">Chức vụ</th>
                             <th scope="col">Email</th>
                             <th scope="col">SĐT</th>
+                            <th scope="col">Tên đơn vị</th>
                             <th scope="col">Tùy chọn</th>
                             </tr>
                         </thead>
@@ -195,7 +196,7 @@
                                     die("Kết nối thất bại  .Kiểm tra lại các tham số khai báo kết nối");
                                 }
                                 //b2 khai bao va thuc hien truy vấn
-                                $sql = "SELECT * from db_nhanvien";
+                                $sql = "SELECT * from db_nhanvien,db_donvi where db_nhanvien.madv=db_donvi.madv";
                                 $result = mysqli_query($conn,$sql);
                                 
                                 //b3  kiem tra va xu li tap ket qua  - ung voi cau lenh select  
@@ -209,8 +210,9 @@
                                             <td><?php echo $row['chucvu']; ?> </td>
                                             <td><?php echo $row['email']; ?> </td>
                                             <td><?php echo $row['sodidong']; ?> </td>
+                                            <td><?php echo $row['tendv']; ?> </td>
                                             <td>
-                                                <a href="suaNhanVien.php?manv=<?php echo $row['manv']; ?>"><i class="fas fa-edit icon-edit"></i></a>
+                                                <a href="UpdateNV.php?manv=<?php echo $row['manv']; ?>"><i class="fas fa-edit icon-edit"></i></a>
                                                 <a href="DeleteNV.php?manv=<?php echo $row['manv']; ?>"><i class="fas fa-trash icon-delete"></i></a>
                                             </td>
                                         </tr>
@@ -241,25 +243,6 @@
           </div>
       </div>
 </main>
-  <footer class="p-3 bg-success text-white position-absolute bottom-0" style="width: 100%;">
-        <div class="contaiter">
-            <div class="row">
-                <div class="col-md-12">
-                    <p class="text-center">Danh bạ điện tử - Đại học Thủy Lợi</p>
-                </div>
-            </div>
-        </div>
-  </footer>
-  <script src="./main.js"></script>
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-    -->
-  </body>
-</html>
+<?php
+    include("../footer.php");
+?>

@@ -1,3 +1,4 @@
+    <!-- footer include -->
     <footer class="p-3 bg-success text-white position-absolute bottom-0" style="width: 100%;">
         <div class="contaiter">
             <div class="row">
@@ -7,7 +8,7 @@
             </div>
         </div>
     </footer>
-    <script src="./Js/main.js"></script>
+    <script src="../Js/main.js"></script>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
