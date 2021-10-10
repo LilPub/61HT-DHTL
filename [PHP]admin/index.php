@@ -40,15 +40,15 @@
                             </a>
                             <div class="home-child callapse list-child active-list">
                                 <ul class="list-unstyled">
-                                    <li class="tab-child">
+                                    <li class="tab-item-child">
                                         <i class="fas fa-caret-right"></i>
                                          Khoa CNTT
                                     </li>
-                                    <li class="tab-child">
+                                    <li class="tab-item-child">
                                         <i class="fas fa-caret-right"></i>
                                         Khoa KT
                                     </li>
-                                    <li class="tab-child">
+                                    <li class="tab-item-child">
                                         <i class="fas fa-caret-right"></i>
                                         Khoa KTO
                                     </li>
@@ -235,6 +235,18 @@
 
                 <div class="tab-info">
                     Tùy chọn
+                </div>
+
+                <div class="tab-info-child">
+                    info-1
+                </div>
+
+                <div class="tab-info-child">
+                    info-2
+                </div>
+
+                <div class="tab-info-child">
+                    info-3
                 </div>
               </div>
               <div class="directory-table">

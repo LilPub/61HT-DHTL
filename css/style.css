@@ -14,10 +14,10 @@
     background-color: gray;
     border-bottom: 3.5px solid black;
 }
-.tab-info{
+.tab-info,.tab-info-child{
     display: none;
 }
-.tab-info.active{
+.tab-info.active,.tab-info-child.active{
     display: block;
 }
 .tableNew,.tableAdmin{
@@ -63,6 +63,6 @@
 .active-list{
     display: none;
 }
-.tab-child{
+.tab-item-child{
     cursor: pointer;
 }
