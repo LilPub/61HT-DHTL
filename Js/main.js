@@ -12,5 +12,8 @@ tabItem.forEach((tab,index) => {
         tab.classList.add('nav-item');
         info.classList.add('active');
         getTag[0].classList.toggle('active-list');
+        getTag[0].onclick = function(e){
+            e.stopPropagation();
+        }
     }
 })

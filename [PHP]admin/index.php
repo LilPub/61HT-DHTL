@@ -41,15 +41,15 @@
                             <div class="home-child callapse list-child active-list">
                                 <ul class="list-unstyled">
                                     <li class="tab-child">
-                                        <i class="fas fa-greater-than fa-xs"></i>
+                                        <i class="fas fa-caret-right"></i>
                                          Khoa CNTT
                                     </li>
                                     <li class="tab-child">
-                                        <i class="fas fa-greater-than fa-xs"></i>
+                                        <i class="fas fa-caret-right"></i>
                                         Khoa KT
                                     </li>
                                     <li class="tab-child">
-                                        <i class="fas fa-greater-than fa-xs"></i>
+                                        <i class="fas fa-caret-right"></i>
                                         Khoa KTO
                                     </li>
                                 </ul>
