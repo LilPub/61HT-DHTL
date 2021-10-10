@@ -14,4 +14,3 @@ tabItem.forEach((tab,index) => {
         getTag[0].classList.toggle('active-list');
     }
 })
-alert('làm ơn');
