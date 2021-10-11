@@ -50,7 +50,7 @@
                                     </li>
                                     <li class="tab-item-child">
                                         <i class="fas fa-caret-right"></i>
-                                        Khoa KTO
+                                        Khoa CK
                                     </li>
                                 </ul>
                             </div>
@@ -238,15 +238,173 @@
                 </div>
 
                 <div class="tab-info-child">
-                    info-1
+                    <form action="">
+                        <div class="search d-flex">
+                            <div class="input-group rounded input-search">
+                                <input type="text" class="form-control rounded" placeholder="Eg: Nguyễn Văn A" aria-label="Search" aria-describedby="search-addon" />
+                                <span type="submit" class="input-group-text border-0" id="search-addon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <table class="table table-bordered tableNew">
+                            <thead class="">
+                                <tr>
+                                <th scope="col">Mã NV</th>
+                                <th scope="col">Họ và tên</th>
+                                <th scope="col">Chức vụ</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">SĐT</th>
+                                <th scope="col">Tên đơn vị</th>
+                                </tr>
+                            </thead>
+                            <tbody> 
+                                <!-- Nhan xet :day la vung du lieu thay doi duoc-->
+                                <?php 
+                                    //b1 :ket noi csdl
+                                    $conn = mysqli_connect('localhost','root','','dhtl_danhba');
+                                    if (!$conn){
+                                        die("Kết nối thất bại  .Kiểm tra lại các tham số khai báo kết nối");
+                                    }
+                                    //b2 khai bao va thuc hien truy vấn
+                                    $sql = "SELECT * from db_nhanvien,db_donvi where db_nhanvien.madv=db_donvi.madv and (db_donvi.tendv='Khoa CNTT' or db_donvi.madv_cha=7)";
+                                    $result = mysqli_query($conn,$sql);
+                                    
+                                    //b3  kiem tra va xu li tap ket qua  - ung voi cau lenh select  
+                                    if(mysqli_num_rows($result)>0){
+                                        $i=1;
+                                        while($row = mysqli_fetch_assoc($result)){
+                                ?>
+                                            <tr>
+                                                <th scope="row"><?php echo $i; ?> </th>
+                                                <td><?php echo $row['tennv']; ?> </td>
+                                                <td><?php echo $row['chucvu']; ?> </td>
+                                                <td><?php echo $row['email']; ?> </td>
+                                                <td><?php echo $row['sodidong']; ?> </td>
+                                                <td><?php echo $row['tendv']; ?> </td>
+                                            </tr>
+                                <?php
+                                            $i++;
+                                        }
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </form>
                 </div>
 
                 <div class="tab-info-child">
-                    info-2
+                    <form action="">
+                        <div class="search d-flex">
+                            <div class="input-group rounded input-search">
+                                <input type="search" class="form-control rounded" placeholder="Eg: Nguyễn Văn A" aria-label="Search"
+                                    aria-describedby="search-addon" />
+                                <span type="submit" class="input-group-text border-0" id="search-addon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <table class="table table-bordered tableNew">
+                            <thead class="">
+                                <tr>
+                                <th scope="col">Mã NV</th>
+                                <th scope="col">Họ và tên</th>
+                                <th scope="col">Chức vụ</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">SĐT</th>
+                                <th scope="col">Tên đơn vị</th>
+                                </tr>
+                            </thead>
+                            <tbody> 
+                                <!-- Nhan xet :day la vung du lieu thay doi duoc-->
+                                <?php 
+                                    //b1 :ket noi csdl
+                                    $conn = mysqli_connect('localhost','root','','dhtl_danhba');
+                                    if (!$conn){
+                                        die("Kết nối thất bại  .Kiểm tra lại các tham số khai báo kết nối");
+                                    }
+                                    //b2 khai bao va thuc hien truy vấn
+                                    $sql = "SELECT * from db_nhanvien,db_donvi where db_nhanvien.madv=db_donvi.madv and db_donvi.tendv='Khoa Kinh Tế'";
+                                    $result = mysqli_query($conn,$sql);
+                                    
+                                    //b3  kiem tra va xu li tap ket qua  - ung voi cau lenh select  
+                                    if(mysqli_num_rows($result)>0){
+                                        $i=1;
+                                        while($row = mysqli_fetch_assoc($result)){
+                                ?>
+                                            <tr>
+                                                <th scope="row"><?php echo $i; ?> </th>
+                                                <td><?php echo $row['tennv']; ?> </td>
+                                                <td><?php echo $row['chucvu']; ?> </td>
+                                                <td><?php echo $row['email']; ?> </td>
+                                                <td><?php echo $row['sodidong']; ?> </td>
+                                                <td><?php echo $row['tendv']; ?> </td>
+                                            </tr>
+                                <?php
+                                            $i++;
+                                        }
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </form>
                 </div>
 
                 <div class="tab-info-child">
-                    info-3
+                    <form action="">
+                        <div class="search d-flex">
+                            <div class="input-group rounded input-search">
+                                <input type="search" class="form-control rounded" placeholder="Eg: Nguyễn Văn A" aria-label="Search"
+                                    aria-describedby="search-addon" />
+                                <span type="submit" class="input-group-text border-0" id="search-addon">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <table class="table table-bordered tableNew">
+                            <thead class="">
+                                <tr>
+                                <th scope="col">Mã NV</th>
+                                <th scope="col">Họ và tên</th>
+                                <th scope="col">Chức vụ</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">SĐT</th>
+                                <th scope="col">Tên đơn vị</th>
+                                </tr>
+                            </thead>
+                            <tbody> 
+                                <!-- Nhan xet :day la vung du lieu thay doi duoc-->
+                                <?php 
+                                    //b1 :ket noi csdl
+                                    $conn = mysqli_connect('localhost','root','','dhtl_danhba');
+                                    if (!$conn){
+                                        die("Kết nối thất bại  .Kiểm tra lại các tham số khai báo kết nối");
+                                    }
+                                    //b2 khai bao va thuc hien truy vấn
+                                    $sql = "SELECT * from db_nhanvien,db_donvi where db_nhanvien.madv=db_donvi.madv and db_donvi.tendv='Khoa Cơ Khí'";
+                                    $result = mysqli_query($conn,$sql);
+                                    
+                                    //b3  kiem tra va xu li tap ket qua  - ung voi cau lenh select  
+                                    if(mysqli_num_rows($result)>0){
+                                        $i=1;
+                                        while($row = mysqli_fetch_assoc($result)){
+                                ?>
+                                            <tr>
+                                                <th scope="row"><?php echo $i; ?> </th>
+                                                <td><?php echo $row['tennv']; ?> </td>
+                                                <td><?php echo $row['chucvu']; ?> </td>
+                                                <td><?php echo $row['email']; ?> </td>
+                                                <td><?php echo $row['sodidong']; ?> </td>
+                                                <td><?php echo $row['tendv']; ?> </td>
+                                            </tr>
+                                <?php
+                                            $i++;
+                                        }
+                                    }
+                                ?>
+                            </tbody>
+                        </table>
+                    </form>
                 </div>
               </div>
               <div class="directory-table">
