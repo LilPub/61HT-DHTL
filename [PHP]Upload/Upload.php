@@ -15,7 +15,7 @@
         <div class="form-upload">
             Chọn ảnh tải lên
             <input type="file" name="file-upload" id="file-upload">
-            <input type="submit" value="Upload" name="btn-upload" id="btn-upload">
+            <input type="submit" value="Tải lên" name="btn-upload" id="btn-upload">
         </div>
     </form>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
